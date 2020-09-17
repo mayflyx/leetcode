@@ -23,11 +23,7 @@ public class TreeNode {
     public TreeNode createTree(int[] nums, int index) {
       TreeNode node = null;
       if (index < nums.length && nums[index]!= -1) {
-          node = new TreeNode();
-          if (node == null) {
-              return null;
-          }
-          node.val = nums[index];
+          node = new TreeNode(nums[index]);
           node.left = createTree(nums, 2 * index + 1);
           node.right = createTree(nums, 2 * index + 2);
       }
